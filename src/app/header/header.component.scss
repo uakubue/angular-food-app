@@ -1,0 +1,28 @@
+header{
+    background-color: #fff;
+    padding: 0;
+    border-bottom: 1px solid #e72929;
+}
+
+a{
+    color: rgb(5, 138, 45);
+    padding: 5px .7em;
+    transition: 1s ease-in-out;
+}
+
+a:hover{
+    background-color: #74bf95;
+    color: #fff;
+    padding: 5px .7em;
+    border-radius: 8px;
+}
+
+.container{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 2em;
+}
+ul li{
+    list-style-type: none;
+}

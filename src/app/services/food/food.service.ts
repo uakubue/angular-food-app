@@ -15,10 +15,10 @@ export class FoodService {
         name:"French fries",
         price: 2.44,
         tags: ['Fast Food', 'Fry'],
-        favourite: false,
+        favourite: true,
         stars: 2,
         imageUrl: '/assets/images/foodie1.jpg',
-        origins: ['India', 'Asia'],
+        origins: ['Bologne','France', 'EU'],
         cookTime: '40 - 50min'
       },
 
@@ -30,7 +30,7 @@ export class FoodService {
         favourite: false,
         stars: 2,
         imageUrl: '/assets/images/foodie2.jpg',
-        origins: ['India', 'Asia'],
+        origins: ['Italia', 'EU'],
         cookTime: '40 - 50min'
       },
 
@@ -39,22 +39,22 @@ export class FoodService {
         name:"Salad",
         price: 1.86,
         tags: ['Fast Food', 'Fry'],
-        favourite: false,
+        favourite: true,
         stars: 2,
         imageUrl: '/assets/images/foodie3.jpg',
-        origins: ['India', 'Asia'],
+        origins: ['Franch', 'EU'],
         cookTime: '40 - 50min'
       },
 
       {
         id: 4,
-        name:"Italian Sushi",
+        name:"Portuguese Sushi",
         price: 2.44,
         tags: ['Fast Food', 'Fry'],
         favourite: false,
         stars: 2,
         imageUrl: '/assets/images/foodie4.jpg',
-        origins: ['India', 'Asia'],
+        origins: ['Portugal', 'EU'],
         cookTime: '40 - 50min'
       },
 
@@ -66,7 +66,7 @@ export class FoodService {
         favourite: true,
         stars: 24,
         imageUrl: '/assets/images/foodie5.jpg',
-        origins: ['India', 'Asia'],
+        origins: ['Italia', 'EU'],
         cookTime: '40 - 50min'
       },
 
@@ -78,7 +78,7 @@ export class FoodService {
         favourite: true,
         stars: 4,
         imageUrl: '/assets/images/foodie6.jpg',
-        origins: ['India', 'Asia'],
+        origins: ['Italia', 'EU'],
         cookTime: '40 - 50min'
       }
     ]

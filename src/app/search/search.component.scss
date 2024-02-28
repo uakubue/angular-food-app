@@ -1,0 +1,19 @@
+.search-container{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding-top: 1em;
+}
+input{
+    width: 45%;
+    font-size: 18px;
+}
+button{
+    background-color: rgb(5, 138, 45);
+    color: #fff;
+    margin-left: .5em;
+    border-radius: 8px;
+    height: 33px;
+    width: 70px;
+    cursor: pointer;
+}

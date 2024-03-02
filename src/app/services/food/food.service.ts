@@ -1,5 +1,6 @@
 import { Injectable } from '@angular/core';
 import { Food } from '../../shared/models/Food';
+import { Tag } from '../../shared/models/Tag';
 
 @Injectable({
   providedIn: 'root'
@@ -8,13 +9,43 @@ export class FoodService {
 
   constructor() { }
 
+  getAllFoodsBySearchTerm(searchTerm: string): Food[]{
+    return this.getAll().filter(food => 
+          food.name.toLowerCase().includes(searchTerm.toLowerCase()));
+  }
+
+  getAllTags(): Tag[]{
+    return [
+      {
+        name: "All",
+        count: 6
+      },
+      {
+        name: "Continental",
+        count: 1
+      },
+      {
+        name: "FastFood",
+        count: 2
+      },
+      {
+        name: "Hamburger",
+        count: 3
+      }
+    ]
+  }
+
+  getAllFoodsByTag(tag: string): Food[]{ 
+    return tag == "All" ? this.getAll() : this.getAll().filter(food => food.tags?.includes(tag))
+        
+  }
   getAll(): Food[]{
     return [
       {
         id: 1,
         name:"French fries",
         price: 2.44,
-        tags: ['Fast Food', 'Fry'],
+        tags: ['Hamburger', 'All'],
         favourite: true,
         stars: 2,
         imageUrl: '/assets/images/foodie1.jpg',
@@ -26,7 +57,7 @@ export class FoodService {
         id: 2,
         name:"Grilled Chicken",
         price: 7.99,
-        tags: ['Fast Food', 'Fry'],
+        tags: ['Hamburger', 'All'],
         favourite: false,
         stars: 2,
         imageUrl: '/assets/images/foodie2.jpg',
@@ -38,7 +69,7 @@ export class FoodService {
         id: 3,
         name:"Salad",
         price: 1.86,
-        tags: ['Fast Food', 'Fry'],
+        tags: ['FastFood', 'All'],
         favourite: true,
         stars: 2,
         imageUrl: '/assets/images/foodie3.jpg',
@@ -50,7 +81,7 @@ export class FoodService {
         id: 4,
         name:"Portuguese Sushi",
         price: 2.44,
-        tags: ['Fast Food', 'Fry'],
+        tags: ['FastFood', 'All'],
         favourite: false,
         stars: 2,
         imageUrl: '/assets/images/foodie4.jpg',
@@ -62,7 +93,7 @@ export class FoodService {
         id: 5,
         name:"Spaghetti bolonise",
         price: 2.44,
-        tags: ['Fast Food', 'Fry'],
+        tags: ['Continental', 'All'],
         favourite: true,
         stars: 24,
         imageUrl: '/assets/images/foodie5.jpg',
@@ -74,7 +105,7 @@ export class FoodService {
         id: 6,
         name:"Pizza",
         price: 12.44,
-        tags: ['Fast Food', 'Fry'],
+        tags: ['Hamburger', 'All'],
         favourite: true,
         stars: 4,
         imageUrl: '/assets/images/foodie6.jpg',

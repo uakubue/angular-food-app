@@ -2,31 +2,31 @@
 <app-tags></app-tags>
 <ul>
     <li *ngFor="let food of foods">
-        <a href="#">
+        <a routerLink="/food/{{food.id}}">
             <img src="{{ food.imageUrl }}" alt="Our food image">
+
+            <div class="content">
+                <div class="name">{{ food.name }}</div>
+
+                <div class="favourite">
+                    <img src="{{ food.favourite ? '../../assets/images/lover.png' : '../../assets/images/favourite.png'}}" width="15px" alt="">
+                </div>
+
+                <div class="product-item-footer">
+                    <div class="origins">
+                        <span *ngFor="let origin of food.origins">
+                            {{ origin }}
+                        </span>
+                    </div>
+                    <div class="cook-time">
+                        <small><img src="../../assets/images/clock.png" width="20px" alt=""> {{ food.cookTime}}</small>
+                    </div>
+                </div>
+                <div class="price">
+                    <span>${{ food.price }}</span>
+                </div>
+            </div>
         </a>
-
-        <div class="content">
-            <div class="name">{{ food.name }}</div>
-
-            <div class="favourite">
-                <img src="{{ food.favourite ? '../../assets/images/lover.png' : '../../assets/images/favourite.png'}}" width="15px" alt="">
-            </div>
-
-            <div class="product-item-footer">
-                <div class="origins">
-                    <span *ngFor="let origin of food.origins">
-                        {{ origin }}
-                    </span>
-                </div>
-                <div class="cook-time">
-                    <small><img src="../../assets/images/clock.png" width="20px" alt=""> {{ food.cookTime}}</small>
-                </div>
-            </div>
-            <div class="price">
-                <span>${{ food.price }}</span>
-            </div>
-        </div>
         
     </li>
 </ul>

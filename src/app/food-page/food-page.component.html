@@ -1,11 +1,15 @@
-<div>
-    <img [src]="food.imageUrl" width="300px" [alt]="food.name">
+<div class="container">
+    <div class="image">
+        <img [src]="food.imageUrl" class="product__img"  [alt]="food.name">
+    </div>
 
     <div class="details">
         <div class="header">
             <h2 class="name">{{ food.name }}</h2>
             <img src="{{ food.favourite ? '../../assets/images/lover.png' : '../../assets/images/favourite.png'}}" width="15px" alt="">
-            <div class="origins">
+        </div>
+
+        <div class="origins">
                 <span *ngFor="let origin of food.origins">{{ origin}}</span>
             </div>
             
@@ -22,8 +26,6 @@
             </div>
 
             <button>Add To Cart</button>
-        </div>
-
        
     </div>
 </div>

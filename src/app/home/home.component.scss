@@ -24,6 +24,7 @@ li a:hover{
     cursor: pointer;
 }
 .content{
+    width: 100%;
     padding: .5em 1em;
     position: relative;
 }
@@ -31,6 +32,8 @@ li a:hover{
 .name{
         font-size: 20px;
 }
+
+
 
 .favourite{
     position: absolute;

@@ -49,7 +49,7 @@ export class FoodService {
       {
         id: 1,
         name:"French fries",
-        price: 2.44,
+        price: 7.34,
         tags: ['Hamburger', 'All'],
         favourite: true,
         stars: 2,
@@ -61,7 +61,7 @@ export class FoodService {
       {
         id: 2,
         name:"Grilled Chicken",
-        price: 7.99,
+        price: 12.19,
         tags: ['Hamburger', 'All'],
         favourite: false,
         stars: 2,
@@ -73,7 +73,7 @@ export class FoodService {
       {
         id: 3,
         name:"Salad",
-        price: 1.86,
+        price: 11.86,
         tags: ['FastFood', 'All'],
         favourite: true,
         stars: 2,
@@ -97,7 +97,7 @@ export class FoodService {
       {
         id: 5,
         name:"Spaghetti bolonise",
-        price: 2.44,
+        price: 4.99,
         tags: ['Continental', 'All'],
         favourite: true,
         stars: 24,
@@ -109,7 +109,7 @@ export class FoodService {
       {
         id: 6,
         name:"Pizza",
-        price: 12.44,
+        price: 12.99,
         tags: ['Hamburger', 'All'],
         favourite: true,
         stars: 4,

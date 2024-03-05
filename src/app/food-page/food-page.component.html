@@ -1,31 +1,30 @@
 <div class="container">
     <div class="image">
-        <img [src]="food.imageUrl" class="product__img"  [alt]="food.name">
+        <img [src]="food.imageUrl" width="200px" class="product__img"  [alt]="food.name">
     </div>
 
     <div class="details">
         <div class="header">
             <h2 class="name">{{ food.name }}</h2>
-            <img src="{{ food.favourite ? '../../assets/images/lover.png' : '../../assets/images/favourite.png'}}" width="15px" alt="">
         </div>
 
         <div class="origins">
-                <span *ngFor="let origin of food.origins">{{ origin}}</span>
-            </div>
+            <span *ngFor="let origin of food.origins">{{ origin}}</span>
+        </div>
             
-             <div class="tags">
-                <app-tags [foodPageTags]="food.tags"></app-tags>
-            </div>
+        <div class="tags">
+            <app-tags [foodPageTags]="food.tags" justifyContent="start"></app-tags>
+        </div>
 
-            <div class="cook-time">
-                <small>Time to prepare about <img src="../../assets/images/clock.png" width="20px" alt=""> {{ food.cookTime}}</small>
-            </div>
+        <div class="cook-time">
+            <small>Time to prepare about: {{ food.cookTime}}</small>
+        </div>
 
-            <div class="price">
-                <span>{{ food.price|currency }}</span>
-            </div>
+        <div class="price">
+            <span>Price: {{ food.price|currency }}</span>
+        </div>
 
-            <button>Add To Cart</button>
+        <button (click)="addToCart()" class="cart_btn">Add To Cart</button>
        
     </div>
 </div>
